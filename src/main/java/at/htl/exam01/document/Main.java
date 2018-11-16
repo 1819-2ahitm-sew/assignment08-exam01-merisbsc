@@ -39,6 +39,7 @@ public class Main {
                 System.out.printf("Email: \'%s\' von \'%s\' an \'%s\'\n", docs[i].getName(), docs[i].getAutor(), docs[i].getEmpfaenger());
             }
         }
+        System.out.println();
         System.out.println("Anzahl Books: " + nrOfBooks);
         System.out.println("Anzahl Emails: " + nrOfEmails);
 

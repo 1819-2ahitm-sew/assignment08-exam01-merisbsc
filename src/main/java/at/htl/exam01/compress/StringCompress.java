@@ -65,11 +65,13 @@ public class StringCompress {
      * @param lines String-Array
      */
     public void print(String[] lines) {
+        char buchstabe;
         for (int i = 0; i < lines.length; i++) {
-            char buchstabe = lines[i].charAt(i);
-            lines[i] = lines[i].replace(buchstabe, ' ');
+            buchstabe = lines[i].charAt(0);
+            //lines[i] = lines[i].replace(buchstabe, ' ');
             System.out.println(lines[i]);
         }
+
     }
 
     /**

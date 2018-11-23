@@ -65,12 +65,20 @@ public class StringCompress {
      * @param lines String-Array
      */
     public void print(String[] lines) {
-        char buchstabe;
-        for (int i = 0; i < lines.length; i++) {
-            buchstabe = lines[i].charAt(0);
-            //lines[i] = lines[i].replace(buchstabe, ' ');
-            System.out.println(lines[i]);
+        String zahl = "";
+        int anzahl = 0;
+        for (int i = 0; i < lines.length; i++){
+            for (int j = 1; j < lines[i].length(); j++) {
+                zahl += lines[i].charAt(j);
+            }
+            anzahl = Integer.parseInt(zahl);
+            for (int k = 0; k < anzahl; k++) {
+                System.out.print(lines[i].charAt(0));
+            }
+            System.out.println();
+            zahl = "";
         }
+
 
     }
 

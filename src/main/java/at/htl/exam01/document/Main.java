@@ -34,9 +34,9 @@ public class Main {
 
         for (int i = 0; i < docs.length; i++) {
             if (docs[i] instanceof Buch) {
-                System.out.printf("Book: \'%s\' von \'%s\'\n", docs[i].getName(), docs[i].getAutor());
+                System.out.println("Book: " + docs[i].toString());
             } else {
-                System.out.printf("Email: \'%s\' von \'%s\' an \'%s\'\n", docs[i].getName(), docs[i].getAutor(), docs[i].getEmpfaenger());
+                System.out.println("Email: " + docs[i].toString());
             }
         }
         System.out.println();

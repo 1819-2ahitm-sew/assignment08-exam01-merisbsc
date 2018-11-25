@@ -2,43 +2,25 @@ package at.htl.exam01.document;
 
 public class Email extends Document{
 
-    //region getter and setter
-    public String getAutor() {
-        return autor;
+    protected String subject;
+    protected String to;
+
+    public String getSubject() {
+        return subject;
     }
 
-    public void setAutor(String autor) {
-        this.autor = autor;
+    public String getTo() {
+        return to;
     }
 
-    public String getName() {
-        return name;
+    public Email(String author, String subject, String to) {
+        super(author);
+        this.subject = subject;
+        this.to = to;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String toString() {
+        return "\'" + getSubject() + "\' von \'" + getAuthor() + "\' an \'" + getTo() + "\'";
     }
 
-    public String getEmpfaenger() {
-        return empfaenger;
-    }
-
-    public void setEmpfaenger(String empfaenger) {
-        this.empfaenger = empfaenger;
-    }
-    //endregion
-
-    String autor;
-    String name;
-    String empfaenger;
-
-    public Email() {
-
-    }
-
-    public Email(String autor, String betreff, String empfaenger) {
-        this.autor = autor;
-        this.name = betreff;
-        this.empfaenger = empfaenger;
-    }
 }

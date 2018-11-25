@@ -2,8 +2,14 @@ package at.htl.exam01.document;
 
 abstract public class Document {
 
-    abstract public String getName();
-    abstract public String getAutor();
-    abstract public String getEmpfaenger();
+    private String author;
+    public Document(String author) {
+        this.author = author;
+    }
 
+    public String getAuthor() {
+        return author;
+    }
+
+    public abstract String toString();
 }

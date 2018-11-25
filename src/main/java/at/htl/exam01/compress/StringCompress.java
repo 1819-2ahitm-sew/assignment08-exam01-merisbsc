@@ -67,18 +67,28 @@ public class StringCompress {
     public void print(String[] lines) {
         String zahl = "";
         int anzahl = 0;
+        //String-Array erstellen leer befüllen
+        String[] strings = new String[getNoOfLines(FILE_NAME)];
+        for (int i = 0; i < strings.length; i++) {
+            strings[i] = "";
+        }
+
         for (int i = 0; i < lines.length; i++){
             for (int j = 1; j < lines[i].length(); j++) {
                 zahl += lines[i].charAt(j);
             }
+
             anzahl = Integer.parseInt(zahl);
+
             for (int k = 0; k < anzahl; k++) {
-                System.out.print(lines[i].charAt(0));
+                strings[i] += lines[i].charAt(0);
             }
-            System.out.println();
             zahl = "";
         }
 
+        for (int l = 0; l < strings.length; l++) {
+            System.out.println(strings[l]);
+        }
 
     }
 
